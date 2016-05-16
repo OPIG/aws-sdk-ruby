@@ -288,7 +288,8 @@ module Seahorse
           else
             http.use_ssl = false
           end
-
+          Rails.logger.warn "!" * 25
+          Rails.logger.warn "ca bundle: #{http.ca_bundle.inspect}"
           http.start
           http
         end
